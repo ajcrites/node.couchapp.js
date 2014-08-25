@@ -162,6 +162,9 @@ if (process.mainModule && process.mainModule.filename === __filename) {
             else if (command == 'sync') {
               app.sync(i == apps.length ? onAfterPushSync : null);
             }
+            else if (command == 'serve') {
+              serve(app);
+            }
           });
         })(i);
       }
